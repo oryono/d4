@@ -1,8 +1,8 @@
 
 
 d3.csv("data.csv").then(function(data) {
-  const svgWidth = 600, svgHeight = 400;
-  const margin = { top: 20, right: 20, bottom: 30, left: 50 };
+  const svgWidth = 800, svgHeight = 400;
+  const margin = { top: 20, right: 20, bottom: 30, left: 100 };
   const width = svgWidth - margin.left - margin.right;
   const height = svgHeight - margin.top - margin.bottom;
 
@@ -22,10 +22,12 @@ d3.csv("data.csv").then(function(data) {
   g.append("g")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(xScale))
-      .append("text")
-      .attr("y", height - 200)
-      .attr("x", width - 100)
-      .attr("text-anchor", "end")
+
+  g.append("text")
+      .attr("transform",
+          "translate(" + (width/2) + " ," +
+          (height + margin.top + 10) + ")")
+      .style("text-anchor", "middle")
       .attr("stroke", "black")
       .text("Year");
 
@@ -40,8 +42,7 @@ d3.csv("data.csv").then(function(data) {
       .attr("dy", "-5.1em")
       .attr("text-anchor", "end")
       .attr("stroke", "black")
-      .text("Amount");
-
+      .text("Quantity");
 
   g.selectAll("rect")
       .data(data)
@@ -52,4 +53,5 @@ d3.csv("data.csv").then(function(data) {
       .attr("y", function(d) { return yScale(d.amount); })
       .attr("height", function(d) { return height - yScale(d.amount); })
       .attr("width", function(d) { return width / data.length - 2 })
+
 });

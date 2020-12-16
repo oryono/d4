@@ -33,18 +33,20 @@ d3.csv("data.csv").then(function(data) {
     const min = q1 - 1.5 * interQuantileRange
     const max = q1 + 1.5 * interQuantileRange
 
-    console.log(min)
-    console.log(max)
-    console.log(interQuantileRange)
-    console.log("q1",q1)
-    console.log("q3", q3)
-    console.log("med",median)
-
 // Show the Y scale
     const y = d3.scaleLinear()
         .domain([min, max + 10])
         .range([height, 0]);
+
     svg.call(d3.axisLeft(y))
+        .append("text")
+        .attr("fill", "#000")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", "0.71em")
+        .attr("text-anchor", "end")
+        .attr("stroke", "black")
+        .text("Pub Number of Claims");
 
     const center = 200
     let boxWidth = 100

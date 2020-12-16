@@ -41,6 +41,14 @@ d3.csv("data.csv").then(function(data) {
         .attr("class", "line")
         .attr("d", valueline);
 
+    svg.append("text")
+        .attr("transform",
+            "translate(" + (width/2) + " ," +
+            (height + margin.top + 10) + ")")
+        .style("text-anchor", "middle")
+        .attr("stroke", "black")
+        .text("Year");
+
     // Add the scatterplot
     svg.selectAll("dot")
         .data(data)
@@ -52,10 +60,19 @@ d3.csv("data.csv").then(function(data) {
     // Add the X Axis
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x));
+        .call(d3.axisBottom(x))
+
 
     // Add the Y Axis
     svg.append("g")
-        .call(d3.axisLeft(y));
+        .call(d3.axisLeft(y))
+        .append("text")
+        .attr("fill", "#000")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 20)
+        .attr("text-anchor", "end")
+        .attr("stroke", "black")
+        .text("Quantity");
+    ;
 
 });

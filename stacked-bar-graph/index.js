@@ -1,6 +1,6 @@
 // Setup svg using Bostock's margin convention
 
-const margin = {top: 20, right: 160, bottom: 35, left: 30};
+const margin = {top: 20, right: 160, bottom: 35, left: 60};
 
 const width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
@@ -77,16 +77,30 @@ const xAxis = d3.svg.axis()
 
 svg.append("g")
     .attr("class", "y axis")
-    .call(yAxis);
+    .call(yAxis)
+    .append("text")
+    .attr("fill", "#000")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 20)
+    .attr("text-anchor", "end")
+    .attr("stroke", "black")
+    .text("Quantity");
 
 svg.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + height + ")")
     .call(xAxis);
 
+svg.append("text")
+    .attr("transform",
+        "translate(" + (width/2) + " ," +
+        (height + margin.top + 10) + ")")
+    .style("text-anchor", "middle")
+    .attr("stroke", "black")
+    .text("Year");
 
 // Create groups for each series, rects for each segment
-const groups = svg.selectAll("g.cost")
+const groups = svg.selectAll("g.h")
     .data(dataset)
     .enter().append("g")
     .attr("class", "cost")
