@@ -43,9 +43,9 @@ const parse = d3.time.format("%Y").parse;
 
 
 // Transpose the data into layers
-const dataset = d3.layout.stack()(["apparel", "beds", "bridges", "pears"].map(function(fruit) {
+const dataset = d3.layout.stack()(["apparel", "beds", "bridges"].map(function(params) {
     return data.map(function(d) {
-        return {x: parse(d.year), y: +d[fruit]};
+        return {x: parse(d.year), y: +d[params]};
     });
 }));
 
