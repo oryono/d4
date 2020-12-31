@@ -73,6 +73,4 @@ d3.csv("data.csv").then(function(data) {
         .attr("text-anchor", "end")
         .attr("stroke", "black")
         .text("Quantity");
-    ;
-
 });
