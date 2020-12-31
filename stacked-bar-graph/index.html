@@ -3,6 +3,20 @@
 <head>
     <meta charset="UTF-8" />
     <title>d3 Stacked bar graph</title>
+</head>
+<body>
+
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="index.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bar Graph</title>
     <style type="text/css">
         svg {
             font: 10px sans-serif;
@@ -23,20 +37,63 @@
             stroke: #ddd;
         }
     </style>
+     <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-</head>
-<body>
-<ul>
-    <li><a href="/bar-graph">Bar Graph</a></li>
-    <li><a href="/line-graph">Line Graph</a></li>
-    <li><a href="/stacked-bar-graph">Stacked Bar Graph</a></li>
-    <li><a href="/scatter-plot">Scatter Plot</a></li>
-    <li><a href="/box-plot">Box Plot</a></li>
-</ul>
-<h1>Stacked Bar graph</h1>
-<h4>Stacked Bar graph of Beds, Apparel, and Bridges classification starts for 1994 to 2014</h4>
+    <!-- Custom styles for this template -->
+    <link href="/css/small-business.css" rel="stylesheet">
 
-<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="index.js"></script>
-</body>
+  </head>
+  <body style="margin-left: 300px">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Coursework</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/bar-graph">Bar Graph
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/line-graph">LIne Graph</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/stacked-bar-graph">Stacked Bar Graph</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/scatter-plot">Scatter Plot</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/box-plot">Box Plot</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  <!-- Page Content -->
+  <h2>TESTING</h2>
+  <div class="container-fluid" id="content">
+    <!-- Call to Action Well -->
+    <div class="card text-white bg-secondary my-5 py-4">
+      <div class="card-body">
+        <h3 class="text-center">Stacked Bar Graph description</h3>
+        <p class="text-white m-0">2014 had the highest quanity of beds and brieges purchased <br/>
+There was a gradual increase in the number of apparel, beds and bridges purchased from 1997 to 1999.<br/>
+More beds than apparels were purchased from 2005 to 2010</p>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="index.js"></script>    
+  </body>
 </html>

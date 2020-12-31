@@ -5,7 +5,7 @@ const margin = {top: 20, right: 160, bottom: 35, left: 60};
 const width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-const svg = d3.select("body")
+const svg = d3.select("#content")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)

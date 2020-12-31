@@ -1,22 +1,80 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="index.css">
-    <title>Learn D3.js</title>
-</head>
-<body>
-<ul>
-    <li><a href="/bar-graph">Bar Graph</a></li>
-    <li><a href="/line-graph">Line Graph</a></li>
-    <li><a href="/stacked-bar-graph">Stacked Bar Graph</a></li>
-    <li><a href="/scatter-plot">Scatter Plot</a></li>
-    <li><a href="/box-plot">Box Plot</a></li>
-</ul>
-<h1>Line Chart using D3.js</h1>
-<h4>Classification Statistics for apparel for the year 1994 to 2014</h4>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bar Graph</title>
+     <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<svg class="line-chart"></svg>
+    <!-- Custom styles for this template -->
+    <link href="/css/small-business.css" rel="stylesheet">
 
-<script src="https://d3js.org/d3.v6.min.js"></script>
-<script src="index.js"></script>
-</body>
+  </head>
+  <body>
+      <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Coursework</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/bar-graph">Bar Graph
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/line-graph">LIne Graph</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/stacked-bar-graph">Stacked Bar Graph</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/scatter-plot">Scatter Plot</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/box-plot">Box Plot</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Page Content -->
+  <div class="container">
+    <!-- Heading Row -->
+      <h1 class="mt-4">A line graph showing the trends in the quantity of apparel purchased from 1994 to 2014</h1>
+    <div class="row align-items-center my-5">
+      <div class="col-lg-12">
+        <svg class="line-chart"></svg>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Call to Action Well -->
+    <div class="card text-white bg-secondary my-5 py-4">
+      <div class="card-body">
+        <h3 class="text-center">Line graph description</h3>
+        <p class="text-white m-0">There was increase in purchase from 1994 to 1999. <br/>
+There was a fall in quantity o apparel prchased from 2007 to 2009 <br/>
+2009 had the least number of apparel puchased. <br/>
+From 2010 to 2014, the difference in quatity of apparel purchased was minimal.<br/> <br/><br/>
+
+<b>Possible reasons for the trends.</b> <br/>
+There coould have been low demand for apparel from 1994 and 1995. <br/>
+1999 had the highest quantity and this could have been due high demand and increased stock for apparel. <br/>
+2009 had the lowest quantity possbily due to reduced stock and low demand.</p>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="index.js"></script>    
+  </body>
 </html>
